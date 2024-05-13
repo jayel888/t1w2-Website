@@ -55,9 +55,32 @@ nav a {
     border-radius: 15%;
 }
 
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+        background-color: var(--blue-light)
+    }
+    50% {
+        transform: rotate(90deg);
+    }
+    100% {
+        transform: rotate(180deg);
+        background-color: var(--pastel-orange)
+    }
+    /* from {background-color: red;}
+    to {background-color: yellow;} */
+}
+
+header h1:hover {
+    animation: spin 0.3s infinite;
+}
+
 nav a:hover {
     background-color: var(--pastel-orange);
     color: black;
+    /* animation-name: spin;
+    animation-duration: 3s; */
+    animation: spin 1s infinite linear;
 }
 
 .training-option {
@@ -73,11 +96,6 @@ border-radius: 3%;
 }
 
 @media screen and (min-width: 600px) {
-
-    nav a {
-        font-size: 1.5rem;
-    }
-
     main{
         display: flex;
         flex-wrap: wrap;
@@ -89,6 +107,10 @@ border-radius: 3%;
 
     }
 
+
+    nav a {
+        font-size: 1.5rem;
+    }
     .training-option {
         margin-top: 5dvw;
 
