@@ -7,13 +7,14 @@
 
 body {
     background-color: var(--blue-light);
-    font-family: Helvetica, Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
     /* text align is horizontal */
     text-align: center;
     /* align items is vertical */
     align-items: center;
+    justify-content: center;
 }
 
 header {
@@ -48,7 +49,56 @@ nav a {
     background-color: black;
     color: var(--blue-light);
     padding: 0.5rem;
+    font-size: 16px;
     margin-left: 0.5rem;
     margin-right: 0.5rem;
+    border-radius: 15%;
+}
 
+nav a:hover {
+    background-color: var(--pastel-orange);
+    color: black;
+}
+
+.training-option {
+    margin-top: 7dvw;
+    background: var(--pastel-orange);
+    padding: 0.5rem;
+    border-radius: 3%;
+}
+
+.training-option img{
+width: 75dvw;
+border-radius: 3%;
+}
+
+@media screen and (min-width: 600px) {
+
+    nav a {
+        font-size: 1.5rem;
+    }
+
+    main{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-around;
+        text-align: center;
+        /* align items is vertical */
+        align-items: center;
+
+    }
+
+    .training-option {
+        margin-top: 5dvw;
+
+    }
+    .training-option img{
+        /* width: 40dvw;
+        height: 40dvh; */
+        /* object-fit: cover; */
+        width: 400px;
+        height: 400px;
+        border-radius: 3%;
+        }
 }
